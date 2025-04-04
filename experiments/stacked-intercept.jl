@@ -1,11 +1,13 @@
 begin 
     using Pkg
     Pkg.activate(dirname(@__DIR__))
+    Pkg.develop(path="C:\\Users\\lisve\\Documents\\POSGModels.jl/")
+    Pkg.instantiate()
     using FictitiousPlay
     using POMDPTools
     using DiscreteValueIteration
     using LinearAlgebra
-    Pkg.activate(@__DIR__)
+    #Pkg.activate(@__DIR__)
     using MarkovGames
     using POSGModels
     using POSGModels.StackedIntercept
