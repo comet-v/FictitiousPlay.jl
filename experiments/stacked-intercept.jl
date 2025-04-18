@@ -18,7 +18,7 @@ begin
     using StaticArrays
 end
 
-game = StackedInterceptMG(obstacles=Set{Coord}([Coord(5, 6), Coord(5, 7), Coord(6, 7), Coord(6, 6)]))
+game = StackedInterceptMG(obstacles=Set{Coord}([Coord(4,5)]), SAMsites=Set{Coord}([Coord(5, 6), Coord(5, 7), Coord(6, 7), Coord(6, 6)]))
 sol = FictitiousPlaySolver(
     verbose=true, 
     iter=20, 
