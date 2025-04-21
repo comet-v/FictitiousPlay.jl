@@ -18,10 +18,10 @@ begin
     using StaticArrays
 end
 
-game = StackedInterceptMG(obstacles=Set{Coord}([Coord(4,5)]), SAMsites=Set{Coord}([Coord(5, 6), Coord(5, 7), Coord(6, 7), Coord(6, 6)]))
+game = StackedInterceptMG(obstacles=Set{Coord}([Coord(4,5), Coord(6,3), Coord(10,9), Coord(9,3), Coord(11,9)]), SAMsites=Set{Coord}([Coord(5, 6), Coord(5, 10), Coord(16, 7), Coord(9, 9)]))
 sol = FictitiousPlaySolver(
     verbose=true, 
-    iter=20, 
+    iter=10, 
     vi_solver = SparseValueIterationSolver(max_iterations=1000, belres=1e-3, verbose=true)
 )
 pol = solve(sol, game)
